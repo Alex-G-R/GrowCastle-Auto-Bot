@@ -10,7 +10,7 @@ After turning on the  script from the VS or any other IDE you will see a window 
 The first button is Start the bot, witch well - starts the bot
 
 The second button is a stop button witch will stop the bot from clicking.
-The hold Q feture is not working by now, i reccomend waiting till the of the wave to click it manually, if you screw something up and the bot will start to click stuff he shouldn't you need to open task menager and kill the execuatble or your IDE.
+The hold Q feture is not working by now, i recommend waiting till the end of the wave to click it manually, if you screw something up and the bot will start to click stuff he shouldn't you need to open task menager and kill the execuatble or your IDE.
 
 Bot is not blindly clicking on X and Y cords hoping it's a good moment, he reads the color of bars and then he decide is it time to click it. So don't worry it won't delete anything by accident
 
