@@ -18,7 +18,7 @@ If you want to export this to exe i will reccomend pyinstaller, simply pip insta
 
   python -m PyInstaller app.py --onefile -w
 
-However if you are intrasted in upgrading my bot i left some tools in the Tools folder and by tools i mean one python script that will print you your mouse X,Y position and on top of that RGB of the pixel you are pointing to. Feel free to use it becouse it helped me a lot
+However if you are intrasted in upgrading my bot i left some tools in the Tools folder and by tools i mean one python script that will print you your mouse X,Y position and on top of that RGB of the pixel you are pointing to. Feel free to use it because it helped me a lot
 
 I also want to say that bots are not allowed by the creators of the Grow Castle, this is ONLY for education ;)
 
