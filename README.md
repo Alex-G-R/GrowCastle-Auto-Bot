@@ -14,7 +14,8 @@ The hold Q feture is not working by now, i reccomend waiting till the of the wav
 
 Bot is not blindly clicking on X and Y cords hoping it's a good moment, he reads the color of bars and then he decide is it time to click it. So don't worry it won't delete anything by accident
 
-Id you want to export this to exe i will reccomend pyinstaller, simply pip install it go to the folder when you have the app.py and type this into the CMD 
+Id you want to export this to exe i will reccomend pyinstaller, simply pip install it go to the folder when you have the app.py and type this into the CMD:
+
   python -m PyInstaller app.py --onefile -w
 
 I also want to say that bots are not allowed by the creators of the Grow Castle, this is ONLY for education ;)
