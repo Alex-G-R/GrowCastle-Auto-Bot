@@ -11,6 +11,7 @@ from tkinter import filedialog, Text
 import os
 import sys
 import threading
+
 #Variables
 running = False
 #Functions
@@ -22,7 +23,7 @@ def start():
     click(1782, 979)
     print("[+]Game started")
     time.sleep(np.random.uniform(4.1,6))
-    while running or keyboard.is_pressed('q') == False:
+    while running or keyboard.is_pressed('q') == False: #Main play loop
         checkIfBattleWon()
         if pyautogui.pixel(436, 75)[2] == 255:
             checkHero(436,75)
@@ -199,29 +200,37 @@ def autoChest_thread():
     print("[+]Auto Chest collect upgrade toggled, status: ", autoChestStatus % 2)
 
 
-#Application
+# Application
 root = tk.Tk()
 root.title("Grow Castle Auto-Bot by Alex-G-R")
 icon_path = "./Icon/icon.ico"
 root.iconbitmap(icon_path)
 
+# Declare canvas
 canvas = tk.Canvas(root, height=500, width=800, bg="#8478F2")
 canvas.pack()
 
+# Start the bot button
 startBot = tk.Button(root, text="Start the Bot",command=start_bot_thread, padx=10, pady = 5, fg="black", bg="white", height=2, width=50)
 canvas.create_window(195, 33, window=startBot)
+
+# Stop the bot button
 stopBot = tk.Button(root, text="Stop the Bot (hold Q to stop)",command=stop, padx=10, pady = 5, fg="black", bg="white", height=2, width=50)
 canvas.create_window(195, 468, window=stopBot)
 
+# Button Auto Castle upgrade toggle
 autoUpgradeCastle = tk.Button(root, text="Auto Castle upgrade", command=autoCastle_thread, fg="black", bg="white", height=2, width=25)
 canvas.create_window(100, 415, window=autoUpgradeCastle)
 
+# Button Auto Archers upgrade toggle
 autoUpgradeArchers = tk.Button(root, text="Auto Archers upgrade", command=autoArchers_thread, fg="black", bg="white", height=2, width=25)
 canvas.create_window(290, 415, window=autoUpgradeArchers)
 
+# Button Auto Chest auto collect toggle
 autoChest = tk.Button(root, text="Auto Chest collect", command=autoChest_thread, fg="black", bg="white", height=2, width=52)
 canvas.create_window(195, 367, window=autoChest)
 
+# Console window, every print command will appear here as text
 output_text = tk.Text(root, height=30, width=50)
 canvas.create_window(590, 250, window=output_text)
 
@@ -245,5 +254,4 @@ def redirect_stdout(target_widget):
     sys.stdout = StdoutRedirector(target_widget)
 
 redirect_stdout(output_text)
-
 root.mainloop()
